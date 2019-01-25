@@ -1,5 +1,5 @@
 # Newsletter Custom Subscriber Fields
-This project is a working example of adding a custom field to the subscriber object and implementing it in the subscribe form view.  Also implements 'required' checkbox in subscriber form custom.
+This project is a working example of adding a custom field *TermsAccepted* to the subscriber object and implementing it in the subscribe form view.  Also implements 'required' checkbox in subscriber form custom.
 
 ## Getting Started
 ### What you will need
