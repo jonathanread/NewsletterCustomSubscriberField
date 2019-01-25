@@ -83,6 +83,17 @@ namespace SF11_2.Custom
 
 					if (subscriberAlreadyInList)
 					{
+						Subscriber subscriber = matchingSubscribers.FirstOrDefault();
+						if(subscriber != null)
+						{
+							//update their name
+							subscriber.FirstName = viewModel.FirstName;
+							subscriber.LastName = viewModel.LastName;
+
+							//update their terms acceptance
+							subscriber.SetValue("TermsAccepted", viewModel.TermsAgreement);
+							newslettersManager.SaveChanges();
+						}
 						// If the email has already been subscribed, consider it as success.
 						return true;
 					}
@@ -97,7 +108,14 @@ namespace SF11_2.Custom
 							subscriber.LastName = viewModel.LastName ?? string.Empty;
 
 							// custom - setting the property values 
-							//subscriber.SetValue("TermsAgreement", viewModel.TermsAgreement);
+							subscriber.SetValue("TermsAccepted", viewModel.TermsAgreement);
+						}
+						else
+						{
+							subscriber.FirstName = viewModel.FirstName ?? string.Empty;
+							subscriber.LastName = viewModel.LastName ?? string.Empty;
+							//update acceptance of terms
+							subscriber.SetValue("TermsAccepted", viewModel.TermsAgreement);
 						}
 
 						// check if the mailing list exists

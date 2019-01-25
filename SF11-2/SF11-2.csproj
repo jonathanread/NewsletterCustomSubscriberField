@@ -1076,6 +1076,7 @@
     <Compile Include="AzureWebRole.cs" />
     <Compile Include="Custom\SubscribeFormModelCustom.cs" />
     <Compile Include="Custom\SubscribeFormViewModelCustom.cs" />
+    <Compile Include="Custom\SubscriberHelper.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

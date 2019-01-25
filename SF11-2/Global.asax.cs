@@ -22,6 +22,7 @@ namespace SF11_2
 		private void Bootstrapper_Bootstrapped(object sender, EventArgs e)
 		{
 			FrontendModule.Current.DependencyResolver.Rebind<ISubscribeFormModel>().To<SubscribeFormModelCustom>();
+			SubscriberHelper.CreateCustomSubscriberField();
 		}
 	}
 }
